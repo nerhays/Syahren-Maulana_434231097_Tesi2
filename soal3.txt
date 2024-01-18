@@ -1,0 +1,54 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package tes.software.house2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Nrhys
+ */
+public class soal3 {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int jam, menit, second;
+        String format;
+        System.out.println("format waktu jam = ");
+        format = input.next();
+        
+        System.out.println("Input Jam = ");
+        jam = input.nextInt();
+        
+        System.out.println("Input Menit = ");
+        menit = input.nextInt();
+        
+        System.out.println("Input Detik = ");
+        second = input.nextInt();
+        
+        //convertjam(format, jam);
+        if("AM".equals(format)){
+            if(jam < 12){
+                jam = jam;
+            }else if(jam == 12){
+                jam = 00;
+            }else{
+                
+            }
+        }else if("PM".equals(format)){
+            if(jam < 12){
+                jam += 12;
+            }else if(jam == 12){
+                jam = jam;
+            }
+        }
+        
+        System.out.println(jam + ":"+menit+":"+second);
+        
+        
+    }
+    
+    
+}

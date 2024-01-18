@@ -1,0 +1,76 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package tes.software.house2;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Nrhys
+ */
+public class soal5 {
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner input = new Scanner(System.in);
+        int jam, menit;
+        String m, j;
+        
+        System.out.println("Input Jam = ");
+        jam = input.nextInt();
+        System.out.println("Input Menit = ");
+        menit = input.nextInt();
+        
+        if(menit == 45){
+            m = "a quarter to";
+        }else if(menit == 50){
+            m = "ten to";
+        }else if(menit == 30){
+            m = "a half to";
+        }else if(menit == 00){
+            m = "O'Clock";
+        }else if(menit == 15){
+            m = "a quarter past";
+        }else{
+            m = "minutes";
+        }
+        
+        if(30 < menit){
+            jam += 1; 
+        }
+        
+        if(jam == 1){
+            j = "one";
+        }else if(jam == 2){
+            j = "two";
+        }else if(jam == 3){
+            j = "three";
+        }else if(jam ==4){
+            j = "four";
+        }else if(jam == 5){
+            j = "five";
+        }else if(jam == 6){
+            j = "six";
+        }else if(jam == 7){
+            j = "seven";
+        }else if(jam == 8){
+            j = "eight";
+        }else if(jam ==9){
+            j = "nine";
+        }else if(jam == 10){
+            j = "ten";
+        }else if(jam ==11){
+            j = "eleven";
+        }else{
+            j = "twelve";
+        }
+        
+        if(menit <= 30){
+            System.out.println(j +" "+ m);
+        }else{
+            System.out.println(m +" "+ j);
+        }
+    }
+    
+}
